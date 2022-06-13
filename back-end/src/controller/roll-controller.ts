@@ -14,6 +14,9 @@ export class RollController {
     return this.rollRepository.find()
   }
 
+  async allStudentRoleState(request: Request, response: Response, next: NextFunction) {
+    return this.studentRollStateRepository.find()
+  }
   async createRoll(request: Request, response: Response, next: NextFunction) {
     const { body: params } = request
 
